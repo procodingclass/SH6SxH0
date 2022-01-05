@@ -1,5 +1,5 @@
 class Box {
-    constructor(x, y, w, h, img) {
+    constructor(x, y, w, h) {
       var options = {
         restitution: 1.2,
         density: 0.04
@@ -8,7 +8,6 @@ class Box {
   
       this.width = w;
       this.height = h;
-      this.image = img;
       World.add(world, this.body);
     }
   
@@ -20,8 +19,8 @@ class Box {
       push();
       translate(pos.x, pos.y);
       rotate(this.body.angle);
-      imageMode(CENTER);
-      image(this.image, 0, 0, this.width, this.height);
+      rectMode(CENTER);
+      rect(0, 0, this.width, this.height);
       pop();
     }
     
