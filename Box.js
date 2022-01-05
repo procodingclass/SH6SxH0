@@ -1,4 +1,4 @@
-class Player {
+class Box {
     constructor(x, y, w, h, img) {
       var options = {
         restitution: 1.2,
